@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+ 
+  /* height: 100vh; */
+  /* background: url('../assets/img.gif') no-repeat center center fixed;  */
+  background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ZxdnFyendiem9qbmQ0MHo2dGQzbnN5dDdhdzRoeXdtd3l6aGpnaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UU2E4pmlIWjBZt03ne/giphy.gif');
+  background-size: cover;
+  font-family: sans-serif;
+}
+
+
+/* Center the todo box on the screen */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin: 40px auto;
+  padding: 20px;
+  width: 400px;
+  min-height: 500px;
+
+  /* background-color: rgba(0, 0, 0, 0.5); */
+   /* translucent for glass effect */
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  color: white;
+}
+
+
+
+/* Heading with animation + neon effect */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #00BFFF, #1E90FF, #00BFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input for adding & editing */
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* Main action buttons */
+button {
+  background-color: rgb(255, 119, 0);
+  color: white;
+  padding: 8px 12px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: rgb(255, 145, 40);
+}
+
+/* Todo list styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  width: 100%;
+}
+
+li {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons inside list */
+li button {
+  background-color: crimson;
+  margin-left: 5px;
+}
+
+li button:hover {
+  background-color: darkred;
+}
