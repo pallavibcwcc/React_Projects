@@ -1,5 +1,6 @@
 LIVE PROJECT LINK IS GIVEN BELOW:-
- https://snazzy-tapioca-f11ee4.netlify.app/
+https://beautiful-panda-9c6c0c.netlify.app/
+
 
 # React + Vite
 
