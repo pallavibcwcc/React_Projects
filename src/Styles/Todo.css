@@ -1,12 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
- 
-  /* height: 100vh; */
-  /* background: url('../assets/img.gif') no-repeat center center fixed;  */
+.Todo-pages {
   background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3ZxdnFyendiem9qbmQ0MHo2dGQzbnN5dDdhdzRoeXdtd3l6aGpnaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UU2E4pmlIWjBZt03ne/giphy.gif');
   background-size: cover;
-  font-family: sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 
@@ -21,28 +20,27 @@ body {
   padding: 20px;
   width: 400px;
   min-height: 500px;
-
-  /* background-color: rgba(0, 0, 0, 0.5); */
    /* translucent for glass effect */
   border-radius: 15px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-
-  color: white;
+ color: white;
 }
 
 
 
 /* Heading with animation + neon effect */
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #00BFFF, #1E90FF, #00BFFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
-  animation: fadeIn 1.2s ease-in-out;
+ font-size: 2.5rem;
+margin-bottom: 20px;
+background: linear-gradient(90deg, #375E97, #274690, #375E97); /* Deep blue gradient */
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 10px rgba(55, 94, 151, 0.7); /* Deep blue glow */
+animation: fadeIn 1.2s ease-in-out;
+
+
 }
 
 @keyframes fadeIn {
@@ -106,10 +104,14 @@ li {
 
 /* Buttons inside list */
 li button {
-  background-color: crimson;
+  background-color: red;
   margin-left: 5px;
 }
 
 li button:hover {
   background-color: darkred;
 }
+
+/* "I applied a modern UI trend called glassmorphism using backdrop-filter to make the Todo box feel frosted over the animated background.
+ I also used neon gradient text for visual emphasis on headings. Flexbox was used for layout control, and
+ I created clear button states with hover transitions for better UX. This styling ensures both readability and visual appeal." */

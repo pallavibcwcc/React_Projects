@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../Styles/Feedback.css'
 
 const Feedback = () => {
   const [suggestions, setSuggestions] = useState('');
@@ -9,8 +9,9 @@ const Feedback = () => {
   };
 
   return (
-<div className='container'>
-    <h1>Form Validation</h1>
+<div className="feedback-page">
+  <div className="formscontainer">
+    <h1>FeedBack</h1>
     <form>
         <div>
             <label>Name:</label>
@@ -97,6 +98,7 @@ const Feedback = () => {
         </div>
     </form>
 
+</div>
 </div>
   )
 

@@ -1,0 +1,86 @@
+/* ===== WORK =====*/
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between grid items */
+  padding: 2rem; /* Add some padding for aesthetics */
+margin-left:50px;
+}
+
+.work__img {
+  position: relative; /* For positioning overlay and text */
+  box-shadow: 0px 8px 30px rgba(14, 36, 49, 0.2); /* Modern shadow effect */
+  border-radius: 0.75rem; /* Smooth rounded corners */
+  overflow: hidden;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.work__img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect */
+  box-shadow: 0px 12px 40px rgba(14, 36, 49, 0.3); /* Elevate shadow */
+}
+
+.work__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ background: linear-gradient(135deg, #FFA07A, #FF8C00, #FF7F50); /* Soft orange gradient */
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1; /* Ensure overlay is above the image */
+}
+
+.work__img:hover::before {
+  opacity: 0.8; /* Show gradient on hover */
+}
+
+.work__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images are fully covered within their container */
+  transition: transform 0.5s ease;
+  z-index: 0; /* Ensure image is below the overlay */
+}
+
+.work__img img:hover {
+  transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+/* Text content on hover */
+.work__img .work__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* White text for better visibility */
+  z-index: 2; /* Place text above gradient */
+  opacity: 0; /* Hidden initially */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth fade and movement */
+}
+
+.work__img:hover .work__content {
+  opacity: 1; /* Show text on hover */
+  transform: translate(-50%, -40%); /* Slight upward movement */
+}
+
+.work__content h3 {
+  font-size: 1.5rem; /* Project title size */
+  margin-bottom: 0.5rem;
+}
+
+.work__content p {
+  font-size: 1rem; /* Description size */
+  line-height: 1.5;
+}
+.section-title{
+    justify-content:center;
+    display:flex;
+   
+}

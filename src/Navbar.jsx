@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Close dropdown on any link click
+  const handleLinkClick = () => setIsOpen(false);
+
   return (
     <nav style={{
       padding: '10px',
@@ -22,28 +25,38 @@ function Navbar() {
         ☰
       </button>
 
-      {/* Always visible Home link */}
-      <Link to="/" style={{ fontWeight: 'bold' }}>Home</Link>
+  <Link
+  to="/"
+  onClick={handleLinkClick}
+  style={{
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
+    color: '#375E97', 
+   
+  }}
+>
+  Home
+</Link>
 
-      {/* Dropdown menu (right under hamburger) */}
+      {/* Dropdown menu */}
       {isOpen && (
         <div style={{
           position: 'fixed',
-           zIndex: 2,   
+          zIndex: 2,
           top: '45px',
           left: '10px',
-        //   background: '#fff',
-            background: 'transparent',  
-        //   boxShadow: '0px 0px 5px gray',
+          background: 'transparent',
           padding: '10px',
           borderRadius: '5px',
+             
         }}>
-  <ul style={{ listStyle: 'none', padding: 0 }}>
- 
-  <li><Link to="/Todo">TodoApp</Link></li>
-  <li><Link to="/Bmi">Bmi</Link></li>
-  <li><Link to="/Feedback">Feedback</Link></li>
-</ul>    
+          <ul style={{ listStyle: 'none', padding: 0 ,  fontWeight: 'bold',
+    fontSize: '1.2rem', }}>
+            <li ><Link to="/Todo" onClick={handleLinkClick}  style={{  color: '#375E97'}}>TodoApp</Link></li>
+            <li><Link to="/Bmi" onClick={handleLinkClick}  style={{  color: '#375E97'}}>Bmi</Link></li>
+            <li><Link to="/Feedback" onClick={handleLinkClick}  style={{  color: '#375E97'}}>Feedback</Link></li>
+            <li><Link to="/Formvalidation" onClick={handleLinkClick}  style={{  color: '#375E97'}}>Formvalidation</Link></li>
+          </ul>
         </div>
       )}
     </nav>

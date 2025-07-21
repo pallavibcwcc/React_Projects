@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Feedback from './pages/Feedback'
 import Todo from './pages/todo';
 import Bmi from './pages/Bmi'
+import Formvalidation from './pages/Formvalidation'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
          <Route path="/Todo" element={<Todo />} />
          <Route path="/Bmi" element={<Bmi />} />
           <Route path="/Feedback" element={<Feedback />} />
+          <Route path="/Formvalidation" element={<Formvalidation/>} />
       </Routes>
     </>
   );

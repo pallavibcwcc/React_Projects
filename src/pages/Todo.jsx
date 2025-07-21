@@ -51,7 +51,7 @@ const Todo = () => {
   };
 
   return (
-  
+  <div className="Todo-pages">
     <div className="todo-container">
         
       <h2>ToDo List</h2>
@@ -88,6 +88,7 @@ const Todo = () => {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };
